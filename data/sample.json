@@ -1,0 +1,9 @@
+{
+  "event_id": "092108-002-sample-001",
+  "event_type": "OBJECT_INSPECTED",
+  "aggregate_type": "puppet_object",
+  "aggregate_id": "shadow_puppet_performance_care-001",
+  "occurred_at": "2026-09-20T18:00:00+08:00",
+  "version": 1,
+  "summary": "登记皮影古件演出保全的首条领域记录"
+}

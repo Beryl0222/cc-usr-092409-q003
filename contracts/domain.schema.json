@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "皮影古件演出保全领域事件",
+  "type": "object",
+  "required": [
+    "event_id",
+    "event_type",
+    "aggregate_type",
+    "aggregate_id",
+    "occurred_at",
+    "version",
+    "summary"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "OBJECT_INSPECTED",
+        "PERFORMANCE_PLANNED",
+        "SUBSTITUTE_ASSIGNED",
+        "REPAIR_RECORDED",
+        "CLEARANCE_GRANTED"
+      ]
+    },
+    "aggregate_type": {
+      "type": "string",
+      "enum": [
+        "puppet_object",
+        "performance_plan",
+        "conservation_action",
+        "operator_clearance"
+      ]
+    },
+    "aggregate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "additionalProperties": true
+}
