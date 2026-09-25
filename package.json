@@ -1,11 +1,11 @@
 {
   "name": "shadow-puppet-performance-care",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
-  "description": "领域事件基础校验",
+  "description": "皮影古件演出负荷护照：检查额度、排期负荷、部件占用、异常修复与离线回执",
   "scripts": {
     "test": "node --test",
-    "build": "node --check src/validator.js"
+    "build": "node --check src/validator.js && node --check src/passport/constants.js && node --check src/passport/events.js && node --check src/passport/event-store.js && node --check src/passport/load.js && node --check src/passport/projection.js && node --check src/passport/service.js"
   }
 }

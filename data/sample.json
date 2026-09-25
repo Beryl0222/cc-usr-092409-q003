@@ -5,5 +5,20 @@
   "aggregate_id": "shadow_puppet_performance_care-001",
   "occurred_at": "2026-09-20T18:00:00+08:00",
   "version": 1,
-  "summary": "登记皮影古件演出保全的首条领域记录"
+  "summary": "三国人物皮影初检，建立演出负荷护照",
+  "object_id": "shadow_puppet_performance_care-001",
+  "name": "三国人物皮影",
+  "inspection": {
+    "version": 1,
+    "inspected_at": "2026-09-20T18:00:00+08:00",
+    "inspector_id": "keeper-007",
+    "vulnerability_level": 2,
+    "vulnerabilities": [
+      { "part_id": "head-001", "material": "驴皮", "note": "强光下彩绘易褪色" },
+      { "part_id": "arm-left-001", "material": "驴皮", "note": "关节牵拉处有旧补缀" }
+    ],
+    "component_ids": ["head-001", "arm-left-001", "arm-right-001", "body-001"],
+    "quota": { "light": 60, "tension": 50, "transport": 40, "environment": 40 },
+    "kind": "initial"
+  }
 }
