@@ -5,5 +5,37 @@
   "aggregate_id": "shadow_puppet_performance_care-001",
   "occurred_at": "2026-09-20T18:00:00+08:00",
   "version": 1,
-  "summary": "登记皮影古件演出保全的首条领域记录"
+  "summary": "首检发证：建立牛皮彩绘战将的演出负荷护照",
+  "payload": {
+    "passport_id": "shadow_puppet_performance_care-001",
+    "puppet_id": "pu-001",
+    "puppet_name": "牛皮彩绘战将",
+    "inspection_id": "insp-2026-0920-01",
+    "inspected_at": "2026-09-20T17:30:00+08:00",
+    "predecessor_inspection_id": null,
+    "quota": { "light": 20, "tension": 20, "transport": 20 },
+    "components": [
+      {
+        "component_id": "head",
+        "name": "彩绘头部",
+        "material": "牛皮",
+        "factors": { "light": 2, "tension": 1.5, "transport": 1 }
+      },
+      {
+        "component_id": "body",
+        "name": "蟒身",
+        "material": "牛皮",
+        "factors": { "light": 1, "tension": 1, "transport": 1 }
+      },
+      {
+        "component_id": "arm",
+        "name": "操纵杆连接臂",
+        "material": "驴皮",
+        "shared_part_id": "joint-A",
+        "factors": { "light": 1, "tension": 2, "transport": 1 }
+      }
+    ],
+    "note": "彩绘头部怕强光，连接臂怕牵拉；joint-A 为跨古件共享关节",
+    "at": "2026-09-20T18:00:00+08:00"
+  }
 }

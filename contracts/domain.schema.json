@@ -1,6 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "皮影古件演出保全领域事件",
+  "title": "皮影古件演出负荷护照领域事件",
+  "description": "演出负荷护照的领域事件信封与事件类型清单。事件只追加、不改写；业务更正产生后继记录。",
   "type": "object",
   "required": [
     "event_id",
@@ -21,10 +22,28 @@
       "enum": [
         "OBJECT_INSPECTED",
         "PERFORMANCE_PLANNED",
+        "PERFORMANCE_RESCHEDULED",
+        "STAGE_USE_CONFIRMED",
+        "STAGE_USE_CANCELLED",
+        "STAGE_COMPLETED",
+        "STANDBY_ACTIVATED",
         "SUBSTITUTE_ASSIGNED",
+        "SUBSTITUTE_REGISTERED",
+        "DAMAGE_REPORTED",
+        "PERFORMANCE_PAUSED",
+        "PERFORMANCE_RESUMED",
         "REPAIR_RECORDED",
-        "CLEARANCE_GRANTED"
-      ]
+        "REPAIR_PLANNED",
+        "REPAIR_SIGN_RECORDED",
+        "RESTORATION_APPROVED",
+        "CLEARANCE_GRANTED",
+        "NOTIFICATION_QUEUED",
+        "NOTIFICATION_DELIVERED",
+        "NOTIFICATION_DELIVERY_FAILED",
+        "REVIEW_FLAGGED",
+        "REQUEST_RECORDED"
+      ],
+      "description": "SUBSTITUTE_ASSIGNED/REPAIR_RECORDED/CLEARANCE_GRANTED 为基线保留事件；护照流程使用其余事件。"
     },
     "aggregate_type": {
       "type": "string",
@@ -32,7 +51,10 @@
         "puppet_object",
         "performance_plan",
         "conservation_action",
-        "operator_clearance"
+        "operator_clearance",
+        "substitute",
+        "notice_outbox",
+        "reconciliation"
       ]
     },
     "aggregate_id": {
@@ -50,6 +72,10 @@
     "summary": {
       "type": "string",
       "minLength": 1
+    },
+    "payload": {
+      "type": "object",
+      "description": "各事件类型的业务负载；详见 README『事件目录』。"
     }
   },
   "additionalProperties": true
